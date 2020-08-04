@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
+import './createForm.css'
 
-export default class CreateForm extends React.Component {
+ class CreateForm extends React.Component {
   constructor(props){
     super(props);
     this.state= {name: '',brand: '',quality: '',price: ''};
@@ -22,19 +23,22 @@ export default class CreateForm extends React.Component {
   }
 
   handleSubmit=(event)=>{
-    alert('Product Details: '+ this.state.name + this.state.brand + this.state.quality + this.state.price);
+    //alert('Product Details: '+ this.state.name + this.state.brand + this.state.quality + this.state.price);
     event.preventDefault(); 
   
+  // use axios for api intregrate applied post method
     axios.post('https://us-central1-nishad-api.cloudfunctions.net/webApi/api/v1/add/slip',({name:this.state.name,brand:this.state.brand,quality:this.state.quality,price: this.state.price}))
     .then(res =>{
       console.log(res);
+      alert('Api hit sucessfully');
     })
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} >
-        <h1>Create Form</h1>
+      <div className="person">
+     <form onSubmit={this.handleSubmit} >
+        <h1 className="tag_h1">Create Form</h1>
         <p>Product name:</p>
         <input type="text" placeholder="Product Name" name="name" value={this.state.name} onChange={this.handleChangename} />
         <p>Product Brand:</p>
@@ -43,13 +47,15 @@ export default class CreateForm extends React.Component {
         <p>Product Quality:</p>
         <input type="text" placeholder="Product Quality" name="quality" value={this.state.quality} onChange={this.handleChangequality}/>
         
-        <p>Product Price:</p>
+        <p>Product Price:</p >
         <input type="text" placeholder="product Price" name="price" value={this.state.price} onChange={this.handleChangeprice}/>
         
         <input  type="submit" value="Submit"/> 
-      </form>);
+      </form>
+      </div>);
     
   }
 }
 CreateForm.propTypes = {};
 
+export default CreateForm;

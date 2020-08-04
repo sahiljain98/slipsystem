@@ -1,0 +1,18 @@
+.heading_h1{
+    color:#FF0000;
+    text-align:center;
+}
+
+.detail_info{
+    border: 1px solid #eee;
+    box-shadow: 0 2px 2px #ccc;
+    width: 1200px;
+    padding:20px;
+}
+.detail_data{
+    border: 1px solid #eee;
+    box-shadow: 0 2px 2px #ccc;
+    width: 1000px;
+    padding:20px;
+    
+}

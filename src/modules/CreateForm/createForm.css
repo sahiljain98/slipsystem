@@ -1,0 +1,10 @@
+.person{
+    border: 1px solid #eee;
+    box-shadow: 0 2px 2px #ccc;
+    width: 800px;
+    padding: 20px;
+}
+.tag_h1{
+    color: #1f1cb0;
+    text-align: center;
+}
