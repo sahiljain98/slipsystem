@@ -1,0 +1,22 @@
+.heading{
+color: #03a9fc;
+text-align :center;
+}
+.user_info{
+    border: 1px solid #eee;
+    box-shadow: 0 2px 2px #ccc;
+    width: 1200px;
+    padding:20px;
+}
+
+
+.user_data{
+    border: 1px solid #eee;
+    box-shadow: 0 2px 2px #ccc;
+    width: 1000px;
+    padding: 20px;
+}
+.user_data:hover,
+.user_data:active{
+    background-color: #C0DDF5;
+}
